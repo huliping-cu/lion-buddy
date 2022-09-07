@@ -1,0 +1,93 @@
+#title-header{
+    font-size: 40px;
+    padding-top: 20px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+#restaurant-header{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.request-cont-style{
+    margin-bottom: 25px;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px 0;
+}
+
+.image-cont-style{
+    width: 300px;
+    margin-bottom: 25px;
+}
+
+.user-name-style{
+    padding-bottom: 5px;
+    font-weight: 500;
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#email-button{
+    margin-top: 10px;
+}
+
+hr{
+    border-top: 5px solid darkgray;
+}
+
+body{
+    margin-bottom: 30px;
+}
+
+#yes_button{
+    font-size: 20px;
+    color: white;
+    background-color: white;   
+    margin-left: 200px;
+    margin-top: 30px;
+    border: solid;
+    border-radius: 8px;
+    background-color: #9BCBEB ; 
+    border-width: 1.5px;
+    height: 50px;
+    width:300px;
+}
+
+#no_button{
+    font-size: 20px;
+    color: #ff5c60;
+    background-color: white;   
+    margin-left: 20px;
+    margin-top: 15px;
+    border: solid;
+    border-radius: 8px;
+    border-color: #ff5c60 ; 
+    border-width: 1.5px;
+    height: 50px;
+    width:300px;
+    margin-left: 0px;
+}
+
+.restaurant-cont-style{
+    text-align: center;
+    padding: 20px;
+}
+
+.restaurant-name-style{
+    color: #022169;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.checked{
+    color: orange;
+}
+
+.img-wrapper{
+    max-height: 300px;
+    overflow: hidden;
+}

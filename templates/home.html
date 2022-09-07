@@ -1,0 +1,180 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<script>
+  let data = {{data|tojson}}
+</script>
+
+<link rel="stylesheet" href="{{url_for('static', filename='home.css')}}">
+<script type="text/javascript" src="{{ url_for('static', filename = 'home.js') }}"></script>
+
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-4">
+        <div class = "row settings">Settings</div>
+        <div class = "row" id = "set_account"> 
+            <img  src="{{url_for('static',filename = 'images/account.png')}}">
+        </div>
+        <!-- <div class = "row" id = "set_preference"> 
+            <img src="{{url_for('static',filename = 'images/preference.png')}}">
+        </div> -->
+      </div>
+      <div class="col-8">
+          <div class = "row" id = "account"> Account  </div>
+          <div class = "row" id = "personal_information">
+            <span id = "personal_information_subheader"> Personal Information</span>
+            <div class = "row" id = "avatar"> Avatar</div>
+            <div class = "row" id = "avatar_row">
+                <span>
+                    <img src="{{url_for('static',filename = 'images/default_profile_pic.webp')}}" id = "profile_pic">
+                </span>
+                <span>
+
+                    <label class="btn" id="change_button">
+                      Change<input type='file' style="display: none;" id="imgInput" />
+                    </label> 
+
+
+                </span>
+                <span>
+                    <button type="submit" id="remove_button">Remove</button>
+                </span> 
+            </div>
+            <div class = "row" id = "name_info">
+                <div class = "col-md-12">
+                    <div class = "personal_info_form"> 
+                        <form class = "personal_info_form">  
+                            <div class="form-row personal_info_cell">
+                                <div class="form-group col-md-6">
+                                  <label for="inputFirstName">First Name</label>
+                                  <input type="name" class="form-control form-control-sm" id="inputFirstName" placeholder="first name" >
+                                </div>
+                                <div class="form-group col-md-6">
+                                  <label for="inputLastName">Last Name</label>
+                                  <input type="name" class="form-control form-control-sm" id="inputLastName" placeholder="last name">
+                                </div>
+                              </div>
+ 
+                              <div class="form-row personal_info_cell">
+                                <div class="form-group col-md-6">
+                                  <label for="inputEmail">Email</label>
+                                  <input type="email" class="form-control form-control-sm" id="inputEmail" placeholder="email">
+                                </div>
+                                <div class="form-group col-md-6 personal_info_cell">
+                                  <label for="inputPhoneNumber">Phone Number:</label>
+                                  <input type="tel" class="form-control form-control-sm" id="inputPhoneNumber" name="inputPhoneNumber" placeholder="phone number "pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                                  <small>Format: 123-456-7890</small>
+                                </div>
+                              </div>
+
+                              <div class="form-row personal_info_cell">
+                                <div class="form-group col-md-6">
+                                  <label for="inputAge">Age</label>
+                                  <input type="number" class="form-control form-control-sm" id="inputAge" placeholder="age" name="age">
+                                </div>
+                                <div class="form-group col-md-6">
+                                  <label for="inputGender">Gender</label>
+                                  <input type="text" class="form-control form-control-sm" id="inputGender" placeholder="female" name="gender">
+                                </div>
+                                <div class="form-group col-md-6 personal_info_cell">
+                                  <label for="inputHobbies">Hobbies</label>
+                                  <input type="text" class="form-control form-control-sm" id="inputHobbies" name="inputHobbies" placeholder="type your hobbies">                                
+                                </div>
+                              </div>
+
+                              <div class="form-row personal_info_cell">
+                                <div class="form-group col-md-6">
+                                  <label for="inputMajor">Major</label>
+                                  <input type="text"  class="form-control form-control-sm" id="inputMajor" name="inputMajor" placeholder = "Physics">
+                                  <!-- <input type="number" class="form-control form-control-sm" id="inputMajor" placeholder="age"> -->
+                                </div>
+                                <div class="form-group col-md-6 personal_info_cell">
+                                  <label for="inputNationality">Nationality</label>
+                                  <input type="text" class="form-control form-control-sm" id="inputNationality" name="inputNationality" placeholder="Chinese">                                
+                                </div>
+                              </div>
+
+                              <div class="form-row personal_info_cell">
+                                <div class="form-group col-md-6">
+                                  <label for="inputGraduatingYear">Graduating Year</label>
+                                  <input type="number" class="form-control form-control-sm" id="inputGraduatingYear" placeholder="year" name="year">
+                                </div>
+                                <div class="form-group col-md-6 personal_info_cell">
+                                  <label for="inputDegree">Degree</label>
+                                  <input type="text" class="form-control form-control-sm" id="inputDegree" name="inputDegree" placeholder="BSMS">                                
+                                </div>
+                              </div>
+
+
+                            <div class="row" id = "email_notification_subheader"> 
+                                Tell Us Your Preferences
+                            </div>
+                            <div class="form-row"  id = "email_notification">
+
+                                Preferred gender for your meal mate:
+                                <div class="row">
+                                      <div class="form-check" >
+                                        <label class="form-check-label" for="gridCheck">
+                                          <select name="preferredGender" id="preferredGender">
+                                            <option value="Female">Female</option>
+                                            <option value="Male">Male</option>    
+                                            <option value="NoPreference">none</option>                               
+                                          </select>
+                                 
+                                        </label>
+                                    </div>
+                                 
+                                </div>
+
+                                Preferred cuisine:
+                                <div class="row">
+                                  <div class="form-check"  >
+                                    <label class="form-check-label" for="gridCheck">
+                                      <select name="inputCuisine" id="inputCuisine">
+                                        <option value="American">American</option>
+                                        <option value="Chinese">Chinese</option>
+                                        <option value="French">French</option>                                        
+                                        <option value="Indian">Indian</option>
+                                        <option value="Italian">Italian</option>
+                                        <option value="Japanese">Japanese</option>
+                                        <option value="Korean">Korean</option>
+                                        <option value="Mexican">Mexican</option>
+                                        <option value="Thai">Thai</option>
+                                        <option value="Vietnamese">Vietnamese</option>                                        
+                                      </select>
+                             
+                                  </label>
+                                </div>
+                             
+                            </div>
+
+
+                            <button  id = "logout_button">Log out</button>
+                            <button  type="submit" id = "save_button">Save </button>
+                            <button  id = "discard_button">Discard </button>
+                            
+
+                          </form>
+
+                    </div>
+
+                      
+                    
+                </div>
+
+            </div>
+          </div>
+
+      </div>
+
+    </div>
+  </div>
+{% endblock %}

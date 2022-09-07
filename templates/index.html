@@ -1,0 +1,58 @@
+<html lang="en">
+  <head>
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="60539441854-ghmfl17prq4gqgpcvgbt2l5o476p4r3k.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="icon" href="data:,">
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>  
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='index.css')}}">
+  
+    
+    <title>LionBuddy - Find a Meal Buddy Today!</title>
+
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-5">
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="/">Columbia Friendship</a>
+          </nav>
+          <div class="login-cont">
+            <span class="login-title">Login</span><br><br>
+            <span class="login-prompt">Sign in with Lionmail!</span><br><br>
+
+            <a class="btn btn-outline-dark" href="/login" role="button" style="text-transform:none">
+              <img width="30px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+              Login with Google
+            </a>
+            
+          </div>
+        </div>
+
+        <div class="col-md-7">
+          <div class="row">
+            <img class="img-fluid review-img" src="{{url_for('static',filename = 'images/login-review.png')}}">
+            <img class="img-fluid logo-img" src="{{url_for('static',filename = 'images/columbia-logo.png')}}">
+          </div>
+          <div class="right-cont">
+            <span class="right-text">Find your meal buddy
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

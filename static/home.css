@@ -1,0 +1,177 @@
+#set_account img{    
+    height: 80px;
+    width: 335px;
+}
+
+
+#set_preference img{
+    padding-left: 10px;
+    height: 80px;
+    width: 335px;
+}
+
+#account{
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+.settings{
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+#personal_information{
+    font-family: serif;
+    font-size: 13px;
+    display: inline-block;
+    border: solid;
+    border-radius: 25px;
+    /* border-style: ridge; */
+    border-width: 1px;
+    border-color: #03254c ;
+    padding: 20px;
+    height: 900px;
+}
+
+#avatar{
+    font-family: serif;
+    display: block;
+    font-size:13px;
+    padding-left: 15px;
+    margin-top: 10px;
+}
+
+#avatar_row{
+    margin-top:10px;
+}
+#profile_pic {
+    width: 70px;
+    height: 70px;
+    border-radius: 15px;
+    margin-left: 10px;
+    
+}
+
+#change_button{
+    font-family: serif;
+    font-size: 13px;
+    background-color: white;   
+    margin-left: 20px;
+    margin-top: 15px;
+    border: solid;
+    border-radius: 8px;
+    border-color: #03254c ; 
+    border-width: 1.5px;
+    height: 34px;
+    width:60px;
+}
+
+#remove_button{
+    font-family: serif;
+    background-color: white;
+    font-size: 13px;
+    color:gray; 
+    margin-left: 10px;
+    margin-top: 15px;
+    border: solid;
+    border-radius: 8px;
+    border-width: 0.5px;
+    border-color: gray ; 
+    height: 34px;
+    width:60px;
+
+}
+
+.personal_info_form{
+    font-family: serif;
+    font-size: 13px;
+}
+.personal_info_cell ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-family: serif;
+    font-size:13px;
+}
+
+#personal_information_subheader{
+    font-size:15px;
+    font-weight: bold;
+}
+
+#email_notification_subheader{
+    font-size:15px;
+    font-weight: bold;
+}
+
+#email_notification{
+    font-family: serif;
+    display: inline-block;
+    border: solid;
+    font-size:13px;
+    /* border-style: ridge; */
+    margin-left: 10px;
+    border-width: 1px;
+    border-color: #03254c ;
+    padding: 20px;
+    width: 460px;
+    height: 120px;
+    margin-top: 10px;
+}
+
+#logout_button{
+    font-family: serif;
+    font-size: 11px;
+    color: #ff5c60;
+    background-color: white;   
+    margin-left: 20px;
+    margin-top: 15px;
+    border: solid;
+    border-radius: 8px;
+    border-color: #ff5c60 ; 
+    border-width: 1.5px;
+    height: 34px;
+    width:60px;
+    margin-left: 0px;
+}
+
+#save_button{
+    font-family: serif;
+    font-size: 11px;
+    color: white;
+    background-color: white;   
+    margin-left: 200px;
+    margin-top: 30px;
+    border: solid;
+    border-radius: 8px;
+    background-color: #9BCBEB ; 
+    border-width: 1.5px;
+    height: 34px;
+    width:60px;
+}
+
+#discard_button{
+    font-family: serif;
+    font-size: 11px;
+    color: #83859C;
+    background-color: white;   
+    margin-left: 20px;
+    margin-top: 15px;
+    border: solid;
+    border-radius: 8px;
+    border-color: #83859C ; 
+    border-width: 1.5px;
+    height: 34px;
+    width:60px;
+}
+
+#inputCuisine{
+    margin-left: 5px;
+    padding-left: 15px;
+}
+
+#preferredGender{
+    margin-left: 0px;
+    padding-left: 15px;
+}

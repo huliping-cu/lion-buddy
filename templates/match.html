@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'match.js') }}"></script>
+<link rel="stylesheet" href="{{url_for('static', filename='match.css')}}">
+
+<script>
+    let email = {{email|tojson}}
+</script>
+
+<div id="title-header"></div>
+
+<div class="container">
+    <div class="row" id="matched-users">
+    </div>
+</div>
+
+{% endblock %}

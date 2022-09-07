@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'request.js') }}"></script>
+<link rel="stylesheet" href="{{url_for('static', filename='request.css')}}">
+
+<script>
+    let receiver_email = {{receiver_email|tojson}}
+    let requester_email = {{requester_email|tojson}}
+    let receiver_name = {{receiver_name|tojson}}
+</script>
+
+<div id="title-header"></div>
+
+<div class="container">
+    <div class="row" id="matched-users">
+    </div>
+</div>
+
+<hr>
+
+<div id="restaurant-header">Restaurants Recommended For You</div>
+
+<div class="container">
+    <div class="row" id="recommended-restaurants">
+    </div>
+</div>
+
+<button type="button" id="yes_button">Yes, I will go!</button>
+<a href="/home"><button type="button" id="no_button">Sorry, I do not want to go</button></a>
+
+{% endblock %}

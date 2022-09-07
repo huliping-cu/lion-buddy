@@ -1,0 +1,54 @@
+.navbar-brand{
+    font-size: 30px;
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+.login-title{
+    font-size: 72px;
+    font-weight: 500;
+}
+
+.login-cont{
+    padding-left: 250px;
+    padding-top: 200px;
+}
+
+.login-prompt{
+    font-size: 30px;
+    color: #666;
+}
+
+body{
+    background-image: linear-gradient(right, #9BCBEB, #9BCBEB 60%, transparent 60%, transparent 100%);
+    background-image: -webkit-linear-gradient(right, #9BCBEB, #9BCBEB 60%, transparent 60%, transparent 100%)  
+}
+
+.right-text{
+    color: white;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.right-cont{
+    text-align: center;
+}
+
+.logo-img{
+    width: 400px;
+    height: 400px;;
+    border-radius: 25px;
+    overflow: hidden;
+    margin-left: 150px;
+    margin-top: 200px;
+}
+
+.review-img{
+    width: 400px;
+    border-radius: 25px;
+    overflow: hidden;
+    display: block;
+    margin-left: 75px;
+    margin-top: 150px;
+    margin-bottom: 100px;
+}

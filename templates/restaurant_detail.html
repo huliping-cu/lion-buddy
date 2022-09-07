@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="{{url_for('static', filename='restaurant_homepage.css')}}">
+<script type="text/javascript" src="{{ url_for('static', filename = 'show_restaurant.js') }}"></script>
+
+<script type="text/javascript" src="../static/sdk/lib/axios/dist/axios.standalone.js"></script>
+<script type="text/javascript" src="../static/sdk/lib/CryptoJS/rollups/hmac-sha256.js"></script>
+<script type="text/javascript" src="../static/sdk/lib/CryptoJS/rollups/sha256.js"></script>
+<script type="text/javascript" src="../static/sdk/lib/CryptoJS/components/hmac.js"></script>
+<script type="text/javascript" src="../static/sdk/lib/CryptoJS/components/enc-base64.js"></script>
+<script type="text/javascript" src="../static/sdk/lib/url-template/url-template.js"></script>
+<script type="text/javascript" src="../static/sdk/lib/apiGatewayCore/sigV4Client.js"></script>
+<script type="text/javascript" src="../static/sdk/lib/apiGatewayCore/apiGatewayClient.js"></script>
+<script type="text/javascript" src="../static/sdk/lib/apiGatewayCore/simpleHttpClient.js"></script>
+<script type="text/javascript" src="../static/sdk/lib/apiGatewayCore/utils.js"></script>
+<script type="text/javascript" src="../static/sdk/apigClient.js"></script>
+
+<script>
+    let cuisine = {{cuisine|tojson}}
+</script>
+
+<div class="title-header">{{cuisine | capitalize}} Restaurants</div>
+
+<div class="container">
+    <div class="row" id="restaurant-results">
+    </div>
+</div>
+
+{% endblock %}

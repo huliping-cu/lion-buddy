@@ -1,0 +1,94 @@
+.title-header{
+    font-size: 40px;
+    padding-top: 20px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.cont-style{
+    background-color: #c4d8e2;
+    border-radius: 25px;
+}
+
+.cuisine-cont-style{
+    padding: 150px;
+    margin-top: 25px;
+    margin-left: 50px;
+    margin-bottom: 25px;
+    background-color: #a6b7c8;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 40px;
+    vertical-align: center;
+}
+
+.cuisine-image{
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+    position:absolute;
+    width: 400px;
+    opacity: 0.3;
+}
+
+.cuisine-text{
+    color: white;
+    font-size: 75px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cuisine-text:hover{
+    color: black;
+    text-decoration: none;
+}
+
+.col-gap{
+    column-gap: 2rem;
+}
+
+body{
+    margin-bottom: 50px;
+}
+
+.restaurant-cont-style{
+    text-align: center;
+    padding: 20px;
+}
+
+.restaurant-name-style{
+    color: #022169;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.review-style{
+    color: #022169;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.checked {
+    color: orange;
+}
+
+.rate-text{
+    color: gray;
+}
+
+i{
+    color: gray;
+}
+
+.toggled{
+    color: #022169;
+}
+
+.img-wrapper{
+    max-height: 300px;
+    overflow: hidden;
+}

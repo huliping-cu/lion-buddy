@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="{{url_for('static', filename='restaurant_homepage.css')}}">
+<script type="text/javascript" src="{{ url_for('static', filename = 'restaurant_homepage.js') }}"></script>
+
+<script>
+    let cuisines = {{cuisines|tojson}}
+    let googlePictureurl = {{session["picture"]|tojson}}
+</script>
+
+<div class="title-header">Find Restaurants</div>
+
+<div class="container cont-style">
+    <div class="row col-gap" id="restaurant-cuisines">
+    </div>
+</div>
+
+{% endblock %}
